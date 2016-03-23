@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Items Ticket Erfassung</title>
+</head>
+<body>
+	<form action="/id2.1/Ingest" method="post">
+		<p><input type="email" required name="email" placeholder="Email" size="80"></p>
+		<p><input type="text" required name="anrede" placeholder="Anrede" size="80"></p>
+		<p><input type="text" required name="vorname" placeholder="Vorname" size="80"></p>
+		<p><input type="text" required name="nachname" placeholder="Nachname" size="80"></p>
+		<p><textarea rows="10" cols="80" required placeholder="Bitte Ihre Frage eingeben" name="frage"></textarea></p>
+		<p><select name="zuordnung" size="5"> 
+			<optgroup label="Sprachen">
+			<option>Deutsch</option> 
+			<option>Englisch</option>
+			</optgroup>
+			<optgroup label="Natruwissenschaften"> 
+			<option>Chemie</option> 
+			<option>Physik</option> 
+			</optgroup>
+			<option>Mathematik</option> 
+		</select></p>
+		<p><input type="submit" value="Abschicken" ></p>
+	</form>
+</body>
+</html>
