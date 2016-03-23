@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="2.1"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd">
+       
+    
+    <managed-bean>
+    	<managed-bean-name>permissions</managed-bean-name>
+    	<managed-bean-class>java.util.HashMap</managed-bean-class>
+    	<managed-bean-scope>none</managed-bean-scope>
+    	<map-entries>
+   			<map-entry><key>browse</key>                    <value>editor;manager;admin</value></map-entry>
+   			<map-entry><key>export</key>                    <value>manager;admin</value></map-entry>
+   			<map-entry><key>changeEmail.neu</key>           <value>manager;admin</value></map-entry>
+   			<map-entry><key>edit.neu</key>                  <value>manager;admin</value></map-entry>
+   			<map-entry><key>delete.neu</key>                <value>manager;admin</value></map-entry>
+   			<map-entry><key>assign.neu</key>                <value>manager;admin</value></map-entry>
+   			<map-entry><key>send.neu</key>                  <value>manager;admin</value></map-entry>
+   			<map-entry><key>noMail.neu</key>                <value>manager;admin</value></map-entry>
+   			<map-entry><key>block.neu</key>                 <value>manager;admin</value></map-entry>
+   			<map-entry><key>extern.neu</key>                <value>manager;admin</value></map-entry>
+   			<map-entry><key>changeEmail.zugewiesen</key>    <value>manager;admin</value></map-entry>
+   			<map-entry><key>edit.zugewiesen</key>           <value>editor;manager;admin</value></map-entry>
+   			<map-entry><key>delete.zugewiesen</key>         <value>manager;admin</value></map-entry>
+   			<map-entry><key>assign.zugewiesen</key>         <value>manager;admin</value></map-entry>
+   			<map-entry><key>send.zugewiesen</key>           <value>editor;manager;admin</value></map-entry>
+   			<map-entry><key>noMail.zugewiesen</key>         <value>manager;admin</value></map-entry>
+   			<map-entry><key>block.zugewiesen</key>          <value>editor;manager;admin</value></map-entry>
+   			<map-entry><key>extern.zugewiesen</key>         <value>manager;admin</value></map-entry>
+   			<map-entry><key>changeEmail.in Bearbeitung</key><value>manager;admin</value></map-entry>
+   			<map-entry><key>edit.in Bearbeitung</key>       <value>editor;manager;admin</value></map-entry>
+   			<map-entry><key>delete.in Bearbeitung</key>     <value>manager;admin</value></map-entry>
+   			<map-entry><key>assign.in Bearbeitung</key>     <value>manager;admin</value></map-entry>
+   			<map-entry><key>send.in Bearbeitung</key>       <value>editor;manager;admin</value></map-entry>
+   			<map-entry><key>noMail.in Bearbeitung</key>     <value>manager;admin</value></map-entry>
+   			<map-entry><key>block.in Bearbeitung</key>      <null-value/></map-entry>
+   			<map-entry><key>extern.in Bearbeitung</key>     <value>manager;admin</value></map-entry>
+   			<map-entry><key>changeEmail.bearbeitet</key>    <null-value/></map-entry>
+   			<map-entry><key>edit.bearbeitet</key>           <null-value/></map-entry>
+   			<map-entry><key>delete.bearbeitet</key>         <value>admin</value></map-entry>
+   			<map-entry><key>assign.bearbeitet</key>         <null-value/></map-entry>
+   			<map-entry><key>send.bearbeitet</key>           <null-value/></map-entry>
+   			<map-entry><key>noMail.bearbeitet</key>         <null-value/></map-entry>
+   			<map-entry><key>block.bearbeitet</key>          <value>manager;admin</value></map-entry>
+   			<map-entry><key>extern.bearbeitet</key>         <null-value/></map-entry>
+   			<map-entry><key>realm</key>                     <value>admin</value></map-entry>
+   			<map-entry><key>account</key>                   <value>editor;manager;admin</value></map-entry>
+   			<map-entry><key>profile</key>                   <value>editor;manager;admin</value></map-entry>
+   			<map-entry><key>config</key>                    <value>admin</value></map-entry>	
+   		</map-entries> 	
+    </managed-bean>
+    
+    <managed-bean>
+    	<managed-bean-name>formaleZuordnung</managed-bean-name>
+    	<managed-bean-class>java.util.ArrayList</managed-bean-class>
+    	<managed-bean-scope>none</managed-bean-scope>
+    	<list-entries>
+    		<value>ddm_anschaffungsvorschlag</value>
+    		<value>ddm_bibliothek;ddm_bestaende;ddm_raumlichkeiten;ddm_zeiten;ddm_adressen</value>
+    		<value>ddm_benutzung;ddm_anmeldung;ddm_benutzerkonto;ddm_ausleihe;ddm_vormerkung;ddm_bereitstellung;ddm_verlaengerung;ddm_auskunft</value>
+    		<value>ddm_literaturrecherche;ddm_literaturrecherche;ddm_lokalerKat;ddm_andereKat;ddm_datenbanken</value>
+    		<value>ddm_sonst</value>
+    	</list-entries>
+    </managed-bean>        
+    
+    <managed-bean>
+    	<managed-bean-name>columns</managed-bean-name>
+    	<managed-bean-class>java.util.ArrayList</managed-bean-class>
+    	<managed-bean-scope>application</managed-bean-scope>
+    	<list-entries>
+    		<value>antwort</value>
+    		<value>erzeugt</value>
+    		<value>email</value>
+    		<value>frage</value>
+    		<value>name</value>
+    		<value>status</value>
+    		<value>zuordnung</value>
+    	</list-entries>
+    </managed-bean>
+      
+    <application>
+        <locale-config >
+            <default-locale >de</default-locale >
+            <supported-locale >de</supported-locale >
+            <supported-locale >en</supported-locale >
+        </locale-config >
+	  <resource-bundle>
+		<base-name>messages</base-name>
+		<var>msg</var>
+	   </resource-bundle>
+     </application>
+
+</faces-config>
